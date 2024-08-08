@@ -9,39 +9,60 @@
 </head>
 
 <body class="bg-gray-100">
-  <main class="container mx-auto mt-8 p-4">
+  <nav class="navbar bg-gray-900 text-white p-4 flex justify-between items-center">
+    <div class="navbar-brand text-xl font-bold">Anthony Chae</div>
+    <button class="navbar-toggler md:hidden text-2xl">&#9776;</button>
+    <ul class="navbar-nav hidden md:flex space-x-4">
+      <li><a href="index.html" class="hover:text-gray-400">Home</a></li>
+      <li><a href="about.html" class="hover:text-gray-400">About</a></li>
+    </ul>
+  </nav>
+  <!-- <main class="container mx-auto mt-8 p-4">
     <h1 class="text-4xl font-bold mb-4">Welcome to My GitHub Pages Site!</h1>
     <p class="text-lg">This is a simple template to get you started with GitHub Pages using HTML and Tailwind CSS.
     </p>
-  </main>
+  </main> -->
 
-  <section class="container mx-auto mt-8 p-4 bg-slate-200 h-screen">
+  <!-- <section class="container mx-auto mt-8 p-4 bg-slate-200 h-screen">
     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Optio distinctio minus cum soluta, vel provident? Vel,
       iste necessitatibus impedit cupiditate doloribus saepe id, fuga molestias odio, accusantium esse! Adipisci,
       perspiciatis.</p>
-  </section>
+  </section> -->
 
-  <script type='text/javascript'>
-    function initEmbeddedMessaging() {
-      try {
-        embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
+  <div class="container mx-auto my-8">
+    <h2 class="text-2xl font-bold mb-4">Reads</h2>
+    <ul class="book-list space-y-2">
+      <li class="flex items-center">
+        <input type="checkbox" id="book2" class="mr-2">
+        <label for="book2" class="flex-grow">Lessons for Living, Phil Stutz</label>
+      </li>
+      <li class="flex items-center">
+        <input type="checkbox" id="book2" class="mr-2">
+        <label for="book2" class="flex-grow">101 Essays That Will Change the Way You Think, Brianna Wiest</label>
+      </li>
+      <li class="flex items-center">
+        <input type="checkbox" id="book2" class="mr-2" checked>
+        <label for="book2" class="flex-grow">The Power of Habit, Charles Duhigg</label>
+      </li>
+      <li class="flex items-center">
+        <input type="checkbox" id="book1" class="mr-2" checked>
+        <label for="book1" class="flex-grow">Supercommunicators, Charles Duhigg</label>
+      </li>
+      <li class="flex items-center">
+        <input type="checkbox" id="book3" class="mr-2" checked>
+        <label for="book3" class="flex-grow">Fourth Wing, Rebecca Yarros</label>
+      </li>
+    </ul>
+  </div>
 
-        embeddedservice_bootstrap.init(
-          '00D30000000o4Ho',
-          'US_Messaging',
-          'https://bas.my.site.com/ESWUSMessaging1721151203124',
-          {
-            scrt2URL: 'https://bas.my.salesforce-scrt.com'
-          }
-        );
-      } catch (err) {
-        console.error('Error loading Embedded Messaging: ', err);
-      }
-    };
+  <script>
+    const navbarToggler = document.querySelector('.navbar-toggler');
+    const navbarNav = document.querySelector('.navbar-nav');
+
+    navbarToggler.addEventListener('click', () => {
+      navbarNav.classList.toggle('hidden');
+    });
   </script>
-  <script type='text/javascript' src='https://bas.my.site.com/ESWUSMessaging1721151203124/assets/js/bootstrap.min.js'
-    onload='initEmbeddedMessaging()'></script>
-
 </body>
 
 </html>
