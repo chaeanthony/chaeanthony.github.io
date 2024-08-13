@@ -5,54 +5,61 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Anthony Chae</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link href="./output.css" rel="stylesheet">
 </head>
 
-<body class="bg-gray-100">
-  <nav class="navbar bg-gray-900 text-white p-4 flex justify-center items-center">
-    <div class="container flex justify-between items-center">
-      <div class="navbar-brand text-3xl font-bold">Anthony Chae</div>
-      <div class="nav-mobile-menu"></div>
-      <button class="navbar-toggler md:hidden text-2xl">&#9776;</button>
-      <ul class="navbar-nav md:flex space-x-4">
-        <li><a href="index.html" class="hover:text-gray-400">Home</a></li>
-        <li><a href="about.html" class="hover:text-gray-400">About</a></li>
+<body class="bg-gray-100 text-clamp-md">
+  <nav class="navbar bg-slate-900 text-white flex justify-center items-center h-16">
+    <div class="container p-4 flex justify-between items-center w-full h-full">
+      <div class="navbar-brand text-clamp-xxl font-bold">Anthony Chae</div>
+      <button class="hamburger sm:hidden text-3xl flex text-center">&#9776;</button>
+      <i class="fa-solid fa-x text-xl hidden"></i>
+      <ul
+        class="navbar-nav top-16 left-0 hidden flex flex-col items-center justify-center gap-2 fixed bg-slate-800 z-10 w-full p-14 py-28
+        sm:w-auto sm:relative sm:flex sm:flex-row sm:justify-start sm:bg-inherit sm:top-auto sm:p-0 sm:m-0 sm:space-x-4">
+        <li><a href="index.html" class="hover:underline-offset-4 hover:underline text-clamp-lg">Home</a></li>
+        <li><a href="about.html" class="underline underline-offset-4 text-clamp-lg">About</a></li>
       </ul>
     </div>
   </nav>
-  <main class="container mx-auto mt-4">
-    <h1 class="text-4xl font-bold">I like blueberries.</h1>
-  </main>
-
-  <div class="container mx-auto my-8">
-    <h2 class="text-2xl font-bold mb-4">Reads</h2>
-    <ul class="book-list space-y-2">
-      <li class="flex items-center">
-        <input type="checkbox" id="book2" class="mr-2 pointer-events-none" checked>
-        <label for="book2" class="flex-grow">Solo Leveling, Volume 4</label>
-      </li>
-      <li class="flex items-center">
-        <input type="checkbox" id="book2" class="mr-2 pointer-events-none">
-        <label for="book2" class="flex-grow">Lessons for Living, Phil Stutz</label>
-      </li>
-      <li class="flex items-center">
-        <input type="checkbox" id="book2" class="mr-2 pointer-events-none">
-        <label for="book2" class="flex-grow">101 Essays That Will Change the Way You Think, Brianna Wiest</label>
-      </li>
-      <li class="flex items-center">
-        <input type="checkbox" id="book2" class="mr-2 pointer-events-none" checked>
-        <label for="book2" class="flex-grow">The Power of Habit, Charles Duhigg</label>
-      </li>
-      <li class="flex items-center">
-        <input type="checkbox" id="book1" class="mr-2 pointer-events-none" checked>
-        <label for="book1" class="flex-grow">Supercommunicators, Charles Duhigg</label>
-      </li>
-      <li class="flex items-center">
-        <input type="checkbox" id="book3" class="mr-2 pointer-events-none" checked>
-        <label for="book3" class="flex-grow">Fourth Wing, Rebecca Yarros</label>
-      </li>
-    </ul>
+  <div class="container p-4 mx-auto mt-4">
+    <main>
+      <p class="text-clamp-xl font-bold">I like blueberries.</p>
+    </main>
+    <div class="my-8">
+      <h2 class="text-clamp-xl font-bold mb-4">Reads</h2>
+      <ul class="book-list space-y-2">
+        <li class="flex items-center">
+          <input type="checkbox" id="book2" class="mr-2 pointer-events-none" checked>
+          <label for="book2" class="flex-grow">Solo Leveling, Volume 4</label>
+        </li>
+        <li class="flex items-center">
+          <input type="checkbox" id="book2" class="mr-2 pointer-events-none">
+          <label for="book2" class="flex-grow">Lessons for Living, Phil Stutz</label>
+        </li>
+        <li class="flex items-center">
+          <input type="checkbox" id="book2" class="mr-2 pointer-events-none">
+          <label for="book2" class="flex-grow">101 Essays That Will Change the Way You Think, Brianna Wiest</label>
+        </li>
+        <li class="flex items-center">
+          <input type="checkbox" id="book2" class="mr-2 pointer-events-none" checked>
+          <label for="book2" class="flex-grow">The Power of Habit, Charles Duhigg</label>
+        </li>
+        <li class="flex items-center">
+          <input type="checkbox" id="book1" class="mr-2 pointer-events-none" checked>
+          <label for="book1" class="flex-grow">Supercommunicators, Charles Duhigg</label>
+        </li>
+        <li class="flex items-center">
+          <input type="checkbox" id="book3" class="mr-2 pointer-events-none" checked>
+          <label for="book3" class="flex-grow">Fourth Wing, Rebecca Yarros</label>
+        </li>
+      </ul>
+    </div>
   </div>
+
+
+
 
   <script>
     const navbarToggler = document.querySelector('.navbar-toggler');

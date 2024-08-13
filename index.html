@@ -5,41 +5,53 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My GitHub Pages Site</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link href="./output.css" rel="stylesheet">
 </head>
 
-<body class="bg-gray-100">
-  <nav class="navbar bg-gray-900 text-white p-4 flex justify-center items-center">
-    <div class="container flex justify-between items-center">
-      <div class="navbar-brand text-3xl font-bold">Anthony Chae</div>
-      <button class="navbar-toggler md:hidden text-2xl">&#9776;</button>
-      <ul class="navbar-nav hidden md:flex space-x-4">
-        <li><a href="index.html" class="hover:text-gray-400">Home</a></li>
-        <li><a href="about.html" class="hover:text-gray-400">About</a></li>
+<body class="bg-gray-100 text-clamp-md">
+  <nav class="navbar bg-slate-900 text-white flex justify-center items-center h-16">
+    <div class="container p-4 flex justify-between items-center w-full h-full">
+      <div class="navbar-brand text-clamp-xxl font-bold">Anthony Chae</div>
+      <button class="hamburger sm:hidden text-3xl flex text-center">&#9776;</button>
+      <i class="fa-solid fa-x text-xl hidden"></i>
+      <ul
+        class="navbar-nav top-16 left-0 hidden flex flex-col items-center justify-center gap-2 fixed bg-slate-800 z-10 w-full p-14 py-28
+        sm:w-auto sm:relative sm:flex sm:flex-row sm:justify-start sm:bg-inherit sm:top-auto sm:p-0 sm:m-0 sm:space-x-4">
+        <li><a href="index.html" class="underline underline-offset-4 text-clamp-lg">Home</a></li>
+        <li><a href="about.html" class="hover:underline-offset-4 hover:underline text-clamp-lg">About</a></li>
       </ul>
     </div>
   </nav>
-  <!-- <main class="container mx-auto mt-8 p-4">
-    <h1 class="text-4xl font-bold mb-4">Welcome to My GitHub Pages Site!</h1>
-    <p class="text-lg">This is a simple template to get you started with GitHub Pages using HTML and Tailwind CSS.
-    </p>
-  </main> -->
-
-  <!-- <section class="container mx-auto mt-8 p-4 bg-slate-200 h-screen">
-    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Optio distinctio minus cum soluta, vel provident? Vel,
-      iste necessitatibus impedit cupiditate doloribus saepe id, fuga molestias odio, accusantium esse! Adipisci,
-      perspiciatis.</p>
-  </section> -->
+  <div class="container px-4 flex mx-auto flex-col h-[calc(100vh-4rem)] justify-between">
+    <main class="container mx-auto mt-8">
+      <p class="text-clamp-xl font-bold">Instinct, Action, Consequence <sup>*</sup></p>
+    </main>
+    <footer>
+      <p class="text-xxs">* Taken from Lessons for Living, Phil Stutz</p>
+    </footer>
+  </div>
 
 
-
+  <script type='text/javascript' src='config.js'></script>
   <script>
-    const navbarToggler = document.querySelector('.navbar-toggler');
     const navbarNav = document.querySelector('.navbar-nav');
+    const hamburger = document.querySelector('.hamburger');
+    const closeMobileMenu = document.querySelector('.fa-x');
 
-    navbarToggler.addEventListener('click', () => {
+    hamburger.addEventListener('click', () => {
       navbarNav.classList.toggle('hidden');
+      hamburger.classList.toggle('hidden');
+      closeMobileMenu.classList.toggle('hidden');
     });
+
+    closeMobileMenu.addEventListener('click', () => {
+      navbarNav.classList.toggle('hidden');
+      hamburger.classList.toggle('hidden');
+      closeMobileMenu.classList.toggle('hidden');
+    });
+
   </script>
 </body>
 
